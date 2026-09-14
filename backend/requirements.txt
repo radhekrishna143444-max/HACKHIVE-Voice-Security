@@ -8,3 +8,4 @@ librosa
 scikit-learn
 joblib
 soundfile
+imageio-ffmpeg
