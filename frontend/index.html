@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HACKHIVE | Voice Security</title><link rel="stylesheet" href="styles.css"></head>
+<body><header><b>● HACKHIVE</b><span>● SECURITY ENGINE ONLINE</span></header><main>
+<section class="hero"><small>AI-POWERED VOICE AUTHENTICITY ANALYSIS</small><h1>Detect suspicious<br><i>voice impersonation.</i></h1><p>Analyze a voice sample, estimate synthetic-voice risk, and trigger an adaptive security response.</p></section>
+<section class="panel"><div class="head"><h2>01 · Voice Input</h2><span>WAV · MP3 · M4A · FLAC · OGG · WEBM</span></div>
+<div class="recordRow"><button id="recordBtn" class="secondary">● START RECORDING</button><span id="recordStatus">Microphone ready</span></div>
+<label class="drop" id="drop"><input id="audioFile" type="file" accept="audio/*"><strong id="fileTitle">Drop audio here or click to browse</strong><em id="fileMeta">Upload a voice sample for analysis</em></label>
+<audio id="preview" class="preview" controls></audio><button id="analyzeBtn" disabled>ANALYZE VOICE →</button><div id="loading">Processing audio through the analysis pipeline…</div></section>
+<section id="result" class="panel hidden"><div class="head"><h2>02 · Security Assessment</h2><b id="risk"></b></div><div class="score"><span>Synthetic likelihood</span><strong id="prob">--%</strong></div><div class="bar"><i id="bar"></i></div><div class="cards"><div><small>MODEL CONFIDENCE</small><b id="confidence">--%</b></div><div><small>RISK LEVEL</small><b id="risk2">--</b></div><div><small>RECOMMENDED ACTION</small><b id="recommendation">--</b></div></div><p id="reason"></p><button id="verifyBtn" class="secondary hidden">RUN ADDITIONAL VERIFICATION</button><div id="verifyMsg" class="verify"></div><aside>AI output is an estimated risk signal, not a guarantee. High-risk results should be confirmed with an additional authentication step.</aside></section>
+<section class="panel history"><div class="head"><h2>03 · Recent Analyses</h2><button id="refreshBtn" class="tiny">REFRESH</button></div><div id="historyList"><span class="muted">No analyses loaded yet.</span></div></section>
+<div class="flow">VOICE　→　ANALYSIS　→　AI　→　RISK　→　ACTION</div></main><script src="app.js"></script></body></html>
